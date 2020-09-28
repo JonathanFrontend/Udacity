@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/b5a50ccac6.js" crossorigin="anonymous"></script>
+    <title>Udacity</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="nav-container">
+            <form class="hidden-form-nav">
+                <input type="checkbox" name="trigger" id="trigger">
+                <label class="burger-menu" for="trigger"></label>
+                <div class="hidden-menu">
+                    <ul class="hidden-menu-list">
+                        <li class="hidden-menu-logo">
+                            <svg height="30" viewbox="0 0 180 30" width="180">
+                                <g fill="none" fill-rule="evenodd">
+                                <path d="M57.6 17.239187c0 2.546698-2.085517 4.407747-4.965517 4.407747-2.88 0-4.965517-1.86105-4.965517-4.407747V7.835994H45.68276v9.501143c0 3.330298 2.88 6.170846 6.951723 6.170846 4.071724 0 6.951724-2.938498 6.951724-6.170846V7.835994H57.6v9.403193zm16.286897-9.403193h-5.36276v15.67199h5.36276c4.468965 0 7.547586-3.03645 7.547586-7.835996 0-4.701596-3.07862-7.835994-7.547586-7.835994zm-.19862 13.71299h-3.177932V9.794994h3.17793c3.376553 0 5.76 2.252847 5.76 5.876994 0 3.917998-2.482757 5.779046-5.76 5.876996zm43.49793.29385c-3.575172 0-5.95862-2.644648-5.95862-6.170846 0-3.526197 2.482758-6.072895 5.95862-6.072895 2.78069 0 4.468966 1.5672 4.468966 1.5672l.794483-1.3713s-1.787587-1.86105-5.46207-1.86105c-4.766896 0-7.746206 3.526198-7.746206 7.738045 0 4.309797 3.07862 7.933945 7.944827 7.933945 3.773793 0 5.66069-2.5467 5.66069-2.5467l-1.092414-1.175398c-.09931-.09795-1.588965 1.959-4.568276 1.959zm14.896553-14.00684h1.986206v15.67199h-1.986207zm10.924137 1.959h4.965517v13.71299h1.986207V9.794994h4.96552v-1.959H143.0069m30.587583 0l-4.766896 7.150344-4.866207-7.150347h-2.085518l5.95862 8.717546v6.954445h1.986208v-6.954444l5.85931-8.71754m-81.434482 0l-6.157242 15.67199h1.986207l1.688276-4.5057 6.45517-1.3713 2.18483 5.876998h1.986203l-6.05793-15.67199h-2.085518zm-1.886897 9.305242l2.97931-7.248294h.099315L97.92 16.063788l-5.56138 1.07745z" fill="#2E3D49"></path>
+                                <path d="M29 .5l1 .5v13c0 5.551887-2.8897 8.695692-5.995216 10.099885L24.0094 24.1l-7.620963 4.388562c-.05877.03456-.11776.068527-.176957.101902l-.08642.049764.001806-.00254C14.48289 29.545895 12.684682 30 11 30 6 30 0 26 0 18V6l2 1v11c0 8 6 10 9 10 1.858706 0 4.86901-.76773 6.89043-3.254517C14.181726 23.872636 10 20.678703 10 14V2.2L2 7 0 6l10-6 1 .5 1 .5v13c0 6.939958 4.515283 8.612086 7.017542 8.933368C19.625786 21.62159 20 19.997902 20 18V5l2 1v12c0 1.852645-.321777 3.49077-.878395 4.91438C23.648223 22.549217 28 20.813144 28 14V2.25L22 6l-2-1 8-5 1 .5z" fill="#02B3E4"></path>
+                                </g>
+                            </svg>
+                        </li>
+                        <li class="hidden-menu-item"><a href="#" class="hidden-link">Programs
+                        </a> <p class="arrow"><i class="fas fa-caret-right"></i></p> </li>
+                        <li class="hidden-menu-item"><a href="#" class="hidden-link">Careers
+                        </a> <p class="arrow"><i class="fas fa-caret-right"></i></p></li>
+                        <li class="hidden-menu-item"><a href="#" class="hidden-link">For Enterprise
+                        </a> <p class="arrow"><i class="fas fa-caret-right"></i></p></li>
+                        <li class="hidden-menu-item"><a href="#" class="hidden-link-si">Sign In
+                        </a></li>
+                        <li class="hidden-menu-item"><a href="#" class="hidden-link-gs">Get Started
+                        </a></li>
+                    </ul>
+                </div>
+            </form>
+
+            <div class="hidden-logo">
+                <svg height="30" viewbox="0 0 30 30" width="30" class="">
+                    <g fill="none" fill-rule="evenodd">
+                    <path d="M29 .5l1 .5v13c0 5.551887-2.8897 8.695692-5.995216 10.099885L24.0094 24.1l-7.620963 4.388562c-.05877.03456-.11776.068527-.176957.101902l-.08642.049764.001806-.00254C14.48289 29.545895 12.684682 30 11 30 6 30 0 26 0 18V6l2 1v11c0 8 6 10 9 10 1.858706 0 4.86901-.76773 6.89043-3.254517C14.181726 23.872636 10 20.678703 10 14V2.2L2 7 0 6l10-6 1 .5 1 .5v13c0 6.939958 4.515283 8.612086 7.017542 8.933368C19.625786 21.62159 20 19.997902 20 18V5l2 1v12c0 1.852645-.321777 3.49077-.878395 4.91438C23.648223 22.549217 28 20.813144 28 14V2.25L22 6l-2-1 8-5 1 .5z" fill="#02B3E4"></path>
+                    </g>
+                </svg>
+            </div>
+
+            <nav class="main-nav">
+                <div class="logo-box">
+                    <svg height="30" viewbox="0 0 180 30" width="180">
+                        <g fill="none" fill-rule="evenodd">
+                        <path d="M57.6 17.239187c0 2.546698-2.085517 4.407747-4.965517 4.407747-2.88 0-4.965517-1.86105-4.965517-4.407747V7.835994H45.68276v9.501143c0 3.330298 2.88 6.170846 6.951723 6.170846 4.071724 0 6.951724-2.938498 6.951724-6.170846V7.835994H57.6v9.403193zm16.286897-9.403193h-5.36276v15.67199h5.36276c4.468965 0 7.547586-3.03645 7.547586-7.835996 0-4.701596-3.07862-7.835994-7.547586-7.835994zm-.19862 13.71299h-3.177932V9.794994h3.17793c3.376553 0 5.76 2.252847 5.76 5.876994 0 3.917998-2.482757 5.779046-5.76 5.876996zm43.49793.29385c-3.575172 0-5.95862-2.644648-5.95862-6.170846 0-3.526197 2.482758-6.072895 5.95862-6.072895 2.78069 0 4.468966 1.5672 4.468966 1.5672l.794483-1.3713s-1.787587-1.86105-5.46207-1.86105c-4.766896 0-7.746206 3.526198-7.746206 7.738045 0 4.309797 3.07862 7.933945 7.944827 7.933945 3.773793 0 5.66069-2.5467 5.66069-2.5467l-1.092414-1.175398c-.09931-.09795-1.588965 1.959-4.568276 1.959zm14.896553-14.00684h1.986206v15.67199h-1.986207zm10.924137 1.959h4.965517v13.71299h1.986207V9.794994h4.96552v-1.959H143.0069m30.587583 0l-4.766896 7.150344-4.866207-7.150347h-2.085518l5.95862 8.717546v6.954445h1.986208v-6.954444l5.85931-8.71754m-81.434482 0l-6.157242 15.67199h1.986207l1.688276-4.5057 6.45517-1.3713 2.18483 5.876998h1.986203l-6.05793-15.67199h-2.085518zm-1.886897 9.305242l2.97931-7.248294h.099315L97.92 16.063788l-5.56138 1.07745z" fill="#2E3D49"></path>
+                        <path d="M29 .5l1 .5v13c0 5.551887-2.8897 8.695692-5.995216 10.099885L24.0094 24.1l-7.620963 4.388562c-.05877.03456-.11776.068527-.176957.101902l-.08642.049764.001806-.00254C14.48289 29.545895 12.684682 30 11 30 6 30 0 26 0 18V6l2 1v11c0 8 6 10 9 10 1.858706 0 4.86901-.76773 6.89043-3.254517C14.181726 23.872636 10 20.678703 10 14V2.2L2 7 0 6l10-6 1 .5 1 .5v13c0 6.939958 4.515283 8.612086 7.017542 8.933368C19.625786 21.62159 20 19.997902 20 18V5l2 1v12c0 1.852645-.321777 3.49077-.878395 4.91438C23.648223 22.549217 28 20.813144 28 14V2.25L22 6l-2-1 8-5 1 .5z" fill="#02B3E4"></path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="nav-menu">
+                    <ul class="menu">
+                        <li class="menu-item">Programs <i class="fas fa-chevron-down"></i>
+                        </li>
+                        <li class="menu-item">Careers <i class="fas fa-chevron-down"></i>
+                        </li>
+                        <li class="menu-item">For Enterprise <i class="fas fa-chevron-down"></i>
+                        </li>
+                        <li class="menu-item-space">
+                            |
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-item-link">Sign In</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="blue-link">GET STARTED</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-container">
+                <div class="hero-showcase">
+                    <div class="hero-showcase-left">
+                        <div class="showcase-content">
+                            <div class="showcase-content-container">
+                                <h2>Bootcamp Quality at 1/10 of the Cost</h2>
+                                <p class="paragraf-1">Udacity is the world’s fastest, most efficient way to master the skills tech companies want. 
+                                100% online, part-time & self-paced.</p>
+                                <button class="btn btn-learn">LEARN MORE</button>
+                                <div class="partner-box">
+                                    <p class="paragraf-2">Industry leading programs built and recognized by top companies worldwide</p>
+                                    <ul class="partner-logos-list">
+                                        <li class="logo-item">
+                                            <img src="https://www.udacity.com/assets/iridium/images/shared/partners/logo-white-google.svg" alt="Google" class="logo">
+                                        </li>
+                                        <li class="logo-item">
+                                            <img src="https://www.udacity.com/assets/iridium/images/homepage/shared/partners-list/logo-white-aws.svg" alt="AWS" class="logo">
+                                        </li>
+                                        <li class="logo-item">
+                                            <img src="https://www.udacity.com/assets/iridium/images/shared/partners/logo-white-att.svg" alt="at&t" class="logo">
+                                        </li>
+                                        <li class="logo-item">
+                                            <img src="https://www.udacity.com/assets/iridium/images/homepage/shared/partners-list/logo-white-ibm.svg" alt="IBM" class="logo">
+                                        </li>
+                                        <li class="logo-item">
+                                            <img src="https://www.udacity.com/assets/iridium/images/shared/partners/logo-white-lyft.svg" alt="lyft" class="logo">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-showcase-right">
+                        <h2>Only at Udacity: <strong>Job-ready Skills</strong></h2>
+                        <table class="table">
+                            <thead>
+                                <th class="td-title"></th>
+                                <th class="td-blue">UDACITY</th>
+                                <th class="td-gray">OTHERS</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="td-title">Learn by doing</td>
+                                    <td class="td-blue"><i class="fas fa-check"></i></td>
+                                    <td class="td-gray">X</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-title">Practitioner-level skills</td>
+                                    <td class="td-blue"><i class="fas fa-check"></i></td>
+                                    <td class="td-gray">X</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-title">Job-focused content</td>
+                                    <td class="td-blue"><i class="fas fa-check"></i></td>
+                                    <td class="td-gray">X</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-title">Real human help</td>
+                                    <td class="td-blue"><i class="fas fa-check"></i></td>
+                                    <td class="td-gray">X</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-title">Personalized code reviews</td>
+                                    <td class="td-blue"><i class="fas fa-check"></i></td>
+                                    <td class="td-gray">X</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-title">Real-life projects</td>
+                                    <td class="td-blue"><i class="fas fa-check"></i></td>
+                                    <td class="td-gray">X</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-2">
+        <h1 class="title">Explore our schools to find your perfect program</h1>
+        <ul class="section-menu">
+            <li class="section-menu-item">PROGRAMMING</li>
+            <li class="section-menu-item">DATA SCIENCE</li>
+            <li class="section-menu-item">ARTIFICIAL INTELLIGENCE</li>
+            <li class="section-menu-item">BUSINESS</li>
+            <li class="section-menu-item">AUTONOMOUS VEHICLES</li>
+            <li class="section-menu-item">CLOUD COMPUTING</li>
+        </ul>
+        <section class="top-section">
+            <div class="card-container-1">
+                <div class="card">
+                    <div class="card-top img-1">
+                        <span class="flag flag-new">NEW</span>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-bottom-1">
+                            <strong>Data Engineer</strong>
+                        </div>
+                        <div class="card-bottom-2">
+                            <div class="bars-1">
+                                <ul class="rating">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star-half"></i></li>
+                                </ul>
+                                <div class="bar"></div>
+                            </div>
+                            <strong>ESTIMATED TIME</strong>
+                            <p>5 months at 5-10 hrs/week</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-top img-2">
+                        <span class="flag flag-popular">POPULAR</span>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-bottom-1">
+                            <strong>Intro to Programming</strong>
+                        </div>
+                        <div class="card-bottom-2">
+                            <div class="bars-1">
+                                <ul class="rating">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star-half"></i></li>
+                                </ul>
+                                <div class="bar"></div>
+                            </div>
+                            <strong>ESTIMATED TIME</strong>
+                            <p>4 months at 5-10 hrs/week</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-top img-3">
+                        <span class="flag flag-new">NEW</span>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-bottom-1">
+                            <strong>Full Stack Web Developer</strong>
+                        </div>
+                        <div class="card-bottom-2">
+                            <div class="bars-1">
+                                <ul class="rating">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star-half"></i></li>
+                                </ul>
+                                <div class="bar"></div>
+                            </div>
+                            <strong>ESTIMATED TIME</strong>
+                            <p>4 months at 5-10 hrs/week</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-top img-4">
+                        <span class="flag flag-popular">POPULAR</span>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-bottom-1">
+                            <strong>C++</strong>
+                        </div>
+                        <div class="card-bottom-2">
+                            <div class="bars-1">
+                                <ul class="rating">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star-half"></i></li>
+                                </ul>
+                                <div class="bar"></div>
+                            </div>
+                            <strong>ESTIMATED TIME</strong>
+                            <p>4 months at 5-10 hrs/week</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-top img-5">
+                        <span class="flag flag-new">NEW</span>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-bottom-1">
+                            <strong>Front End Web Developer</strong>
+                        </div>
+                        <div class="card-bottom-2">
+                            <div class="bars-1">
+                                <ul class="rating">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star-half"></i></li>
+                                </ul>
+                                <div class="bar"></div>
+                            </div>
+                            <strong>ESTIMATED TIME</strong>
+                            <p>4 months at 5-10 hrs/week</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <section class="middle-section">
+            <h1 class="title-2">Don't waste your valuable time or money</h1>
+            <h4>Only Udacity has all the critical factors to deliver real results</h4>
+            <div class="card-container-2">
+                <ul class="card-list">
+                    <li class="card-holder">
+                        <div class="benefit-card benefit-card-blue">
+                            <img src="//www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/6pk4riNMII7w6COla8glF4/8c8655c3e7f185537eec5ee9ed118e83/EmployeableSkills__1_.svg" alt="Job" class="card-img">
+                            <h3>Get real employable skills</h3>
+                            <p>Our quality curriculum is designed 
+                                with top-tier industry partners, 
+                                not academics, so you learn the 
+                                high-impact skills that top companies 
+                                want.</p>
+                        </div>
+                    </li>
+                    <li class="card-holder">
+                        <div class="benefit-card benefit-card-yellow">
+                            <img src="//www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/6oOXJEvILWWE2x4mUiRnwH/fc4d17a755c4e78b11bb24775458fcc2/ActiveLearning__1_.svg" alt="Project" class="card-img">
+                            <h3>Project based, active learning</h3>
+                            <p>Learn by doing with real-world projects 
+                                and other hands-on exercises that lead 
+                                to real skills mastery.</p>
+                        </div>
+                    </li>
+                    <li class="card-holder">
+                        <div class="benefit-card benefit-card-green">
+                            <img src="//www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/1lUt0ObnFgoXsVtDTRaiIB/ba0d0f3d6e84f6f0740234ccb474ed28/Schedule__1_.svg" alt="Schedule" class="card-img">
+                            <h3>Learn on your schedule</h3>
+                            <p>Self-paced learning - whenever and 
+                                wherever you want. Graduate while 
+                                learning part-time for 10 hrs/week.</p>
+                        </div>
+                    </li>
+                    <li class="card-holder">
+                        <div class="benefit-card benefit-card-purple">
+                            <img src="//www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/7mYegAlCmb6Zmh4fvWlAxK/e036c865aff3c5b1f9f816d08ab2a545/HelpYouNeed__1_.svg" alt="Help" class="card-img">
+                            <h3>The help you need, when you need it</h3>
+                            <p>Reach out to our mentors 24/7 and 
+                                have your coding questions answered 
+                                quickly so you can keep learning.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <article class="box-resources">
+            <h1>Make the most of your online learning experience</h1>
+            <p>Our Online Learning Resource Center has tips, tricks and inspiring stories to help you learn while staying home.</p>
+            <a href="#" class="btn">EXPLORE RESOURCES</a>
+        </article>
+    </div>
+<div class="lightgreen-bg">
+    <div class="container">
+        <div class="box-numbers">
+            <h1 class="title-2">Strength in numbers</h1>
+            <ul class="number-card-list">
+                <li class="number-card-holder">
+                    <div class="number-card">
+                        <img src="//www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/1I5Q4ulQdaV2Cd2RxJG1NF/9012118676e481a058bbbc1951c953c1/degree-hat.svg" alt="Graduate" class="number-logo">
+                        <h2 class="title-3">100,000+</h2>
+                        <strong>Udacity graduation and counting</strong>
+                    </div>
+                </li>
+                <li class="number-card-holder">
+                    <div class="number-card">
+                        <img src="//www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/58pro2AvCh9F0M3GQQ2cGB/683daf82b944e4c342f3e4f3eca22e3b/star_copy.svg" alt="Expert" class="number-logo">
+                        <h2 class="title-3">200+</h2>
+                        <strong>Industry experts partnering to build our content</strong>
+                    </div>
+                </li>
+                <li class="number-card-holder">
+                    <div class="number-card">
+                        <img src="//www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/8E5HTugHBjVRYb0NxgSYB/54acb70c22932686ba6b2509b401c91d/star_copy_2.svg" alt="Growth" class="number-logo">
+                        <h2 class="title-3">100+</h2>
+                        <strong>Enterprise customers world-wide</strong>
+                    </div>
+                </li>
+            </ul>
+            <ul class="student-card-list">
+                <li class="student-card-holder">
+                    <div class="student-card student-card-green">
+                        <div class="student-card-top">
+                            <img src="//www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/2hJTmqhPe2T5zPCSVC3waq/533fc738cb83f2baf5aa75ca3ae77161/Jesse.png" alt="Sudent-1" class="student-img">
+                            <h2 class="title-3">Jesse</h2>
+                            <p>"The curriculum was directly targeted toward applied techniques with high profile projects – real datasets with industry partners. It helped me achieve my career transition goal."</p>
+                        </div>
+                        <div class="student-card-bottom">
+                            <strong>NOW AT</strong>
+                            <p>Raytheon | Data Scientist</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="student-card-holder">
+                    <div class="student-card  student-card-purple">
+                        <div class="student-card-top">
+                            <img src="//www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/4nmjsKImQCCTpeoHhMMz1W/548748ac6a642329aadde86996d23fcf/Sundar.png" alt="Sudent-2" class="student-img">
+                            <h2 class="title-3">Sundar</h2>
+                            <p>"The curriculum was aligned with what I wanted to study. The assignments are specific to the industry I’m in. I was able to develop new language translation tools for my company."</p>
+                        </div>
+                        <div class="student-card-bottom">
+                            <strong>NOW AT</strong>
+                            <p>Comcast | Lead Data Scientist</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="student-card-holder">
+                    <div class="student-card  student-card-blue">
+                        <div class="student-card-top">
+                            <img src="//www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/3GBOJxWBUVtGuEDc1Oxsxj/8742cdc8459747649df0184f2674673b/David.png" alt="Sudent-3" class="student-img">
+                            <h2 class="title-3">David</h2>
+                            <p>"One of the things that attracted me to Udacity was a curriculum developed by people that worked for some of the biggest and most successful tech companies.”</p>
+                        </div>
+                        <div class="student-card-bottom">
+                            <strong>NOW AT</strong>
+                            <p>Panera Bread | Data Administration</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="success-button-wrapper">
+                <a href="#" class="btn btn-success">MORE SUCCESS STORIES</a>
+            </div>
+        </div>
+        <footer class="main-footer">
+            <div class="logo-box-footer">
+                <svg height="30" viewbox="0 0 180 30" width="180">
+                    <g fill="none" fill-rule="evenodd">
+                    <path d="M29 .5l1 .5v13c0 5.551887-2.8897 8.695692-5.995216 10.099885L24.0094 24.1l-7.620963 4.388562c-.05877.03456-.11776.068527-.176957.101902l-.08642.049764.001806-.00254C14.48289 29.545895 12.684682 30 11 30 6 30 0 26 0 18V6l2 1v11c0 8 6 10 9 10 1.858706 0 4.86901-.76773 6.89043-3.254517C14.181726 23.872636 10 20.678703 10 14V2.2L2 7 0 6l10-6 1 .5 1 .5v13c0 6.939958 4.515283 8.612086 7.017542 8.933368C19.625786 21.62159 20 19.997902 20 18V5l2 1v12c0 1.852645-.321777 3.49077-.878395 4.91438C23.648223 22.549217 28 20.813144 28 14V2.25L22 6l-2-1 8-5 1 .5z" fill="#02B3E4"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="footer-top">
+                <div class="list-box list-box-1">
+                    <strong>FEATURED PROGRAMS</strong>
+                    <form class="hidden-form">
+                        <input type="checkbox" name="plus1" id="plus1">
+                        <label for="plus1" class="hidden-plus"><i class="fas fa-plus"></i></label>
+                    </form>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <!-- <li><a href="#">RPA Developer with UiPath</a> </li> 
+                        <li><a href="#">Agile Software Development</a></li>
+                        <li><a href="#">Data Science for Business Leaders</a></li>
+                        <li><a href="#">DevOps Engineer for Microsoft Azure</a></li>
+                        <li><a href="#"></a></li>Introduction to Cybersecurity
+                        <li><a href=""></a></li>Intermediate JavaScript
+                        <li><a href=""></a></li>Monetization Strategy
+                        <li><a href=""></a></li>Growth Product Manager
+                        <li><a href=""></a></li>Java Web Developer
+                        <li><a href=""></a></li>Data Product Manager
+                        <li><a href=""></a></li>SQL
+                        <li><a href=""></a></li>AI for Healthcare
+                        <li><a href=""></a></li>AWS Cloud Architect
+                        <li><a href=""></a></li>Intel® Edge AI for IoT Developers
+                        <li><a href=""></a></li>Product Manager
+                        <li><a href=""></a></li>AI for Business Leaders
+                        <li><a href=""></a></li>Data Intro to Machine Learning with TensorFlow
+                        <li><a href=""></a></li>Data Streaming
+                        <li><a href=""></a></li>UX Designer
+                        <li><a href=""></a></li>AI Product Manager
+                        <li><a href=""></a></li>Sensor Fusion Engineer
+                        <li><a href=""></a></li>Data Visualization
+                        <li><a href=""></a></li>Cloud Developer
+                        <li><a href=""></a></li>Cloud Dev Ops Engineer
+                        <li><a href=""></a></li>C++
+                        <li><a href=""></a></li>Data Structures and Algorithms
+                        <li><a href=""></a></li>Marketing Analytics
+                        <li><a href=""></a></li>Data Engineer
+                        <li><a href=""></a></li>Android Basics
+                        <li><a href=""></a></li>Android Developer
+                        <li><a href=""></a></li>iOS Developer
+                        <li><a href=""></a></li>Business Analytics
+                        <li><a href=""></a></li>Data Analyst
+                        <li>Front End Web Developer</li>
+                        <li>Full Stack Web Developer</li>
+                        <li>Intro to Programming</li>
+                        <li>Intro to Machine Learning</li>
+                        <li>Machine Learning Engineer</li>
+                        <li>Predictive Analytics for Business</li>
+                        <li>Programming for Data Science with Python</li>
+                        <li>Programming for Data Science with R</li>
+                        <li>React</li> -->
+                    </ul>
+                </div>
+                <div class="list-box list-box-2">
+                    <strong>ONLY AT UDACITY</strong>
+                    <form class="hidden-form">
+                        <input type="checkbox" name="plus2" id="plus2">
+                        <label for="plus2" class="hidden-plus"><i class="fas fa-plus"></i></label>
+                    </form>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                    </ul>
+                </div>
+                <div class="list-box list-box-3">
+                    <strong>RESOURCES</strong>
+                    <form class="hidden-form">
+                        <input type="checkbox" name="plus3" id="plus3">
+                        <label for="plus3" class="hidden-plus"><i class="fas fa-plus"></i></label>
+                    </form>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                    </ul>
+                </div>
+                <div class="list-box list-box-4">
+                    <strong>COMPANY</strong>
+                    <form class="hidden-form">
+                        <input type="checkbox" name="plus4" id="plus4">
+                        <label for="plus4" class="hidden-plus"><i class="fas fa-plus"></i></label>
+                    </form>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                    </ul>
+                </div>
+                <div class="list-box list-box-5">
+                    <strong>SUPPORT</strong>
+                    <form class="hidden-form">
+                        <input type="checkbox" name="plus5" id="plus5">
+                        <label for="plus5" class="hidden-plus"><i class="fas fa-plus"></i></label>
+                    </form>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                    </ul>
+                </div>
+                <div class="list-box list-box-6">
+                    <strong>UDACITY SCHOOLS</strong>
+                    <form class="hidden-form">
+                        <input type="checkbox" name="plus6" id="plus6">
+                        <label for="plus6" class="hidden-plus"><i class="fas fa-plus"></i></label>
+                    </form>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                    </ul>
+                </div>
+                <div class="list-box list-box-7">
+                    <strong>PROGRAMS</strong>
+                    <form class="hidden-form">
+                        <input type="checkbox" name="plus7" id="plus7">
+                        <label for="plus7" class="hidden-plus"><i class="fas fa-plus"></i></label>
+                    </form>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                    </ul>
+                </div>
+                <div class="list-box list-box-8">
+                    <strong>ENTERPRISE</strong>
+                    <form class="hidden-form">
+                        <input type="checkbox" name="plus8" id="plus8">
+                        <label for="plus8" class="hidden-plus"><i class="fas fa-plus"></i></label>
+                    </form>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-1">
+                    <div class="footer-bottom-1-left">
+                        © 2011–2020 Udacity, Inc. &nbsp;
+                        <a href="#" class="footer-link"> Legal & Privacy </a>&nbsp;<a href="#" class="footer-link"> Site Map</a>
+                    </div>
+                    <div class="sm-div">
+                        <ul class="social-media">
+                            <li><img src="./img/facebook-logo.svg" alt="Facebook" class="sm-logo"></li>
+                            <li><img src="./img/twitter-logo.svg" alt="Twitter" class="sm-logo"></li>
+                            <li><img src="./img/medium-logo.svg" alt="Medium" class="sm-logo"></li>
+                            <li><img src="./img/linkedin-logo.svg" alt="LinkedIn" class="sm-logo"></li>
+                            <li><img src="./img/instagram-logo.svg" alt="Instagram" class="sm-logo"></li>
+                        </ul>
+                    </div>
+                </div>
+                    <p class="small-text">"Nanodegree" is a registered trademark of Udacity. © 2011–2020 Udacity, Inc.<br><br>Udacity is not an accredited university and we don't confer traditional degrees. Udacity Nanodegree programs represent collaborations with our industry partners who help us develop our content and who hire many of our program graduates.</p>
+            </div>
+        </footer>
+    </div>
+</div>
+</body>
+</html>
